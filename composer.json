@@ -24,7 +24,7 @@
     "illuminate/support": "^6.0",
     "doctrine/dbal": "^2.5",
     "webappid/laravel-user": "^2.0",
-    "webappid/laravel-country": "^1.0"
+    "webappid/laravel-country": "^2.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^8.0",
