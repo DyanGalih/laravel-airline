@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "72f5a91ebdcc4653c07be4fa79a09c65",
+    "content-hash": "3d99c40dc7b55b9bd52eb85a26a94c5e",
     "packages": [
         {
             "name": "doctrine/cache",
@@ -445,12 +445,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "834593d5900615639208417760ba6a17299e2497"
+                "reference": "3e3b1e562bf33c7bbd4aefdc810523cc8b00b562"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/834593d5900615639208417760ba6a17299e2497",
-                "reference": "834593d5900615639208417760ba6a17299e2497",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/3e3b1e562bf33c7bbd4aefdc810523cc8b00b562",
+                "reference": "3e3b1e562bf33c7bbd4aefdc810523cc8b00b562",
                 "shasum": ""
             },
             "require": {
@@ -494,7 +494,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2019-12-30T08:14:25+00:00"
+            "time": "2020-01-02T12:23:54+00:00"
         },
         {
             "name": "laravel/framework",
@@ -502,12 +502,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "50e43a5728cc65a0697187bdc8e8e39520707ec4"
+                "reference": "15d67444846c712b6bec7db86e0647dc721c188f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/50e43a5728cc65a0697187bdc8e8e39520707ec4",
-                "reference": "50e43a5728cc65a0697187bdc8e8e39520707ec4",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/15d67444846c712b6bec7db86e0647dc721c188f",
+                "reference": "15d67444846c712b6bec7db86e0647dc721c188f",
                 "shasum": ""
             },
             "require": {
@@ -602,6 +602,7 @@
                 "league/flysystem-cached-adapter": "Required to use the Flysystem cache (^1.0).",
                 "league/flysystem-sftp": "Required to use the Flysystem SFTP driver (^1.0).",
                 "moontoast/math": "Required to use ordered UUIDs (^1.1).",
+                "nyholm/psr7": "Required to use PSR-7 bridging features (^1.2).",
                 "pda/pheanstalk": "Required to use the beanstalk queue driver (^4.0).",
                 "psr/http-message": "Required to allow Storage::put to accept a StreamInterface (^1.0).",
                 "pusher/pusher-php-server": "Required to use the Pusher broadcast driver (^4.0).",
@@ -640,7 +641,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-01-01T14:47:26+00:00"
+            "time": "2020-01-04T02:57:59+00:00"
         },
         {
             "name": "league/commonmark",
@@ -945,27 +946,27 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.22.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "738fbd8d80b2c5e158fda76c29c2de432fcc6f7e"
+                "reference": "cb6d9852f5c298635944981db058b3d4a3b02dfc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/738fbd8d80b2c5e158fda76c29c2de432fcc6f7e",
-                "reference": "738fbd8d80b2c5e158fda76c29c2de432fcc6f7e",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/cb6d9852f5c298635944981db058b3d4a3b02dfc",
+                "reference": "cb6d9852f5c298635944981db058b3d4a3b02dfc",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "php": "^7.1.8 || ^8.0",
-                "symfony/translation": "^3.4 || ^4.0"
+                "symfony/translation": "^3.4 || ^4.0 || ^5.0"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.14 || ^3.0",
                 "kylekatarnls/multi-tester": "^1.1",
-                "phpmd/phpmd": "dev-php-7.1-compatibility",
+                "phpmd/phpmd": "^2.8",
                 "phpstan/phpstan": "^0.11",
                 "phpunit/phpunit": "^7.5 || ^8.0",
                 "squizlabs/php_codesniffer": "^3.4"
@@ -975,6 +976,9 @@
             ],
             "type": "library",
             "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                },
                 "laravel": {
                     "providers": [
                         "Carbon\\Laravel\\ServiceProvider"
@@ -1001,14 +1005,14 @@
                     "homepage": "http://github.com/kylekatarnls"
                 }
             ],
-            "description": "A simple API extension for DateTime.",
+            "description": "An API extension for DateTime that supports 281 different languages.",
             "homepage": "http://carbon.nesbot.com",
             "keywords": [
                 "date",
                 "datetime",
                 "time"
             ],
-            "time": "2019-08-07T12:36:44+00:00"
+            "time": "2020-01-03T21:54:45+00:00"
         },
         {
             "name": "opis/closure",
@@ -1321,12 +1325,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "7779489a47d443f845271badbdcedfe4df8e06fb"
+                "reference": "f6da4ae7c5027f4b6c1f8bd83ec920683a9ceaa6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/7779489a47d443f845271badbdcedfe4df8e06fb",
-                "reference": "7779489a47d443f845271badbdcedfe4df8e06fb",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/f6da4ae7c5027f4b6c1f8bd83ec920683a9ceaa6",
+                "reference": "f6da4ae7c5027f4b6c1f8bd83ec920683a9ceaa6",
                 "shasum": ""
             },
             "require": {
@@ -1400,7 +1404,7 @@
                 "identifier",
                 "uuid"
             ],
-            "time": "2019-12-17T08:18:51+00:00"
+            "time": "2020-01-02T18:51:30+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3037,30 +3041,30 @@
         },
         {
             "name": "webappid/laravel-user",
-            "version": "1.6.0",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webappid/laravel-user.git",
-                "reference": "d245f181ab0eba46d48debb2bb65bdcf075a808b"
+                "reference": "6b6c2d496fec0119148052e750fdf68e252ad56a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webappid/laravel-user/zipball/d245f181ab0eba46d48debb2bb65bdcf075a808b",
-                "reference": "d245f181ab0eba46d48debb2bb65bdcf075a808b",
+                "url": "https://api.github.com/repos/webappid/laravel-user/zipball/6b6c2d496fec0119148052e750fdf68e252ad56a",
+                "reference": "6b6c2d496fec0119148052e750fdf68e252ad56a",
                 "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "^2.5",
-                "illuminate/support": "5.5.*|6.*",
-                "nesbot/carbon": "2.22.*",
+                "illuminate/support": "^6.0",
+                "nesbot/carbon": "^2.0",
                 "php": ">=7.2.0",
                 "webpatser/laravel-uuid": "^3.0"
             },
             "require-dev": {
-                "mockery/mockery": "dev-master@dev",
-                "orchestra/testbench": "~3.5",
-                "phpunit/phpunit": "7.2.6",
-                "squizlabs/php_codesniffer": "3.*"
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "^4.0",
+                "phpunit/phpunit": "^8.0",
+                "squizlabs/php_codesniffer": "^3.0"
             },
             "type": "library",
             "extra": {
@@ -3089,7 +3093,7 @@
                 }
             ],
             "description": "Core simple user management for laravel",
-            "time": "2019-10-08T10:18:33+00:00"
+            "time": "2019-11-27T07:40:32+00:00"
         },
         {
             "name": "webpatser/laravel-uuid",
@@ -4941,10 +4945,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "webappid/laravel-user": 20,
-        "webappid/laravel-country": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
