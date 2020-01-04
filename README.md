@@ -1,20 +1,7 @@
-# Airport package for laravel
+# Airline package for laravel
 
-the data from this package based on https://openflights.org/data.html#airport
+the data from this package based on https://openflights.org/data.html#airline
 
 how to install:
-1. install via composer `composer require webappid/laravel-airport`
-2. seeding the data `webappid:airport:seed`
-
-example get airport by country :
-
-```
-<?php
-use WebAppId\Airport\Services\AirportService
-
-class ExampleAirport{
-   public function getAirPort(AirportService $airportService, Container $container){
-      $result = $container->call([$airportService, 'getAllAirportByCountry'], ['countryCode' => '[country_code]']);
-   }
-}
-```
+1. install via composer `composer require webappid/laravel-airline`
+2. seeding the data `webappid:airline:seed`
