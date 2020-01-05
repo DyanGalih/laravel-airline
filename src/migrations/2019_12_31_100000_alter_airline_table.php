@@ -19,6 +19,7 @@ class AlterAirlineTable extends Migration
      */
     public function up()
     {
+        DB::connection()->getDoctrineSchemaManager()->getDatabasePlatform()->registerDoctrineTypeMapping('enum', 'string');
         Schema::table('airlines', function (Blueprint $table) {
             $table->string('alias', 100)
                 ->nullable(true)
@@ -34,6 +35,7 @@ class AlterAirlineTable extends Migration
      */
     public function down()
     {
+        DB::connection()->getDoctrineSchemaManager()->getDatabasePlatform()->registerDoctrineTypeMapping('enum', 'string');
         Schema::table('airlines', function (Blueprint $table) {
             $table->string('alias', 10)
                 ->nullable(true)
