@@ -33,13 +33,21 @@ class AirlineSeeder extends Seeder
                     if ($data['id'] != 'id') {
                         $airlineParam = Lazy::copyFromArray($data, $airlineParam, Lazy::AUTOCAST);
                         $airlineParam->user_id = '1';
+                        unset($airlineParam->id);
+
                         $airlineParam->active = strtoupper($airlineParam->active);
-                        if(!strpos($_SERVER['SCRIPT_NAME'], 'phpunit')){
-                            $country = $this->container->call([$countryRepository,'getLike'],['search' => $data['country_id']]);
-                            $airlineParam->country_id = $country[0]->id;
-                        }else{
-                            $airlineParam->country_id = 1;
+                        if (!strpos($_SERVER['SCRIPT_NAME'], 'phpunit')) {
+                            $country = $this->container->call([$countryRepository, 'getLike'], ['search' => $data['country_id']]);
+                            if (count($country) > 0) {
+                                $airlineParam->country_id = $country[0]->id;
+                            } else {
+                                $airlineParam->country_id = 302613;
+                            }
+
+                        } else {
+                            $airlineParam->country_id = 302613;
                         }
+
                         $this->container->call([$airportRepository, 'store'], ['airlineParam' => $airlineParam]);
                     }
                 }
