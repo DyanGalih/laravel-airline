@@ -73,13 +73,12 @@ class AirlineRepository
     /**
      * @param string $q
      * @param Airline $airline
-     * @param int $start
      * @param int $limit
      * @return LengthAwarePaginator
      */
-    public function getByNameLike(string $q, Airline $airline, $start = 0, $limit = 12): LengthAwarePaginator
+    public function getByNameLike(string $q, Airline $airline, $limit = 12): LengthAwarePaginator
     {
-        return $airline->where('name', 'LIKE', '%' . $q . '%')->paginate($start, $limit);
+        return $airline->where('name', 'LIKE', '%' . $q . '%')->paginate($limit);
     }
 
     /**
