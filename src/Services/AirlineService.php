@@ -32,9 +32,9 @@ class AirlineService extends BaseService implements AirlineServiceContract
      * @param AirlineListResponse $airlineListResponse
      * @return AirlineListResponse
      */
-    public function getByNameLike(string $q, AirlineRepository $airlineRepository, AirlineListResponse $airlineListResponse): AirlineListResponse
+    public function getByNameLike(string $q, int $limit, AirlineRepository $airlineRepository, AirlineListResponse $airlineListResponse): AirlineListResponse
     {
-        $result = $this->getContainer()->call([$airlineRepository, 'getByNameLike'], ['q' => $q]);
+        $result = $this->getContainer()->call([$airlineRepository, 'getByNameLike'], ['q' => $q, 'limit' => $limit]);
         if (count($result) > 0) {
             $airlineListResponse->setStatus(true);
             $airlineListResponse->setMessage('Data Found');

@@ -32,7 +32,7 @@ interface AirlineServiceContract
      * @param AirlineListResponse $airlineListResponse
      * @return AirlineListResponse
      */
-    public function getByNameLike(string $q, AirlineRepository $airlineRepository, AirlineListResponse $airlineListResponse): AirlineListResponse;
+    public function getByNameLike(string $q, int $limit, AirlineRepository $airlineRepository, AirlineListResponse $airlineListResponse): AirlineListResponse;
 
     /**
      * @param string $code

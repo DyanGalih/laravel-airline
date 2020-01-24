@@ -78,7 +78,10 @@ class AirlineRepository
      */
     public function getByNameLike(string $q, Airline $airline, $limit = 12): LengthAwarePaginator
     {
-        return $airline->where('name', 'LIKE', '%' . $q . '%')->paginate($limit);
+        return $airline
+            ->where('name', 'LIKE', '%' . $q . '%')
+            ->orWhere('iata_code', $q)
+            ->paginate($limit);
     }
 
     /**
