@@ -72,14 +72,21 @@ class AirlineRepository
 
     /**
      * @param string $q
+     * @param bool $isActive
+     * @param int $countryId
      * @param Airline $airline
      * @param int $limit
      * @return LengthAwarePaginator
      */
-    public function getByNameLike(string $q, Airline $airline, $limit = 12): LengthAwarePaginator
+    public function getByNameLike(string $q, ?bool $isActive, ?int $countryId, Airline $airline, $limit = 12): LengthAwarePaginator
     {
         return $airline
             ->where('name', 'LIKE', '%' . $q . '%')
+            ->when($isActive != null, function ($query) use ($isActive) {
+                return $query->where('active', ($isActive ? 'Y' : 'N'));
+            })->when($countryId != null, function ($query) use ($countryId) {
+                return $query->where('country_id', $countryId);
+            })
             ->orWhere('iata_code', $q)
             ->paginate($limit);
     }
